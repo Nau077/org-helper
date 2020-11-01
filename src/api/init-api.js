@@ -9,6 +9,8 @@ function initApi(c) {
     console.log('Api-Server is running on port: ' + c.prefsManager.server_port);
   });
 
+  app.set('context', c);
+
   app.use('/auth', auth);
 }
 
